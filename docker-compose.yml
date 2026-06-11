@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: rick_and_morty_db
+      POSTGRES_USER: rick_and_morty_user
+      POSTGRES_PASSWORD: rick_and_morty_password
+    ports:
+      - "5432:5432"
